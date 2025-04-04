@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -173,3 +174,180 @@ hr {
 .controls button:hover {
     background-color: #0056b3;
 }
+=======
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.background-blur {
+    background-image: url('bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+.controls {
+    margin: 20px;
+}
+
+.controls select {
+    margin-left: 10px;
+    padding: 5px;
+}
+#container {
+    background-color: #FFECDB;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #FF9149;
+}
+
+#scoreboard {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-top: 2px solid #ddd;
+    margin: 20px 0;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.tile {
+    background-color: #ffd2d2;
+    border: 2px solid #ccc;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    height: 100px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.tile:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.tile.placed {
+    pointer-events: none;
+    color: #FF9149;
+}
+
+.tile.winner {
+    background-color: #90ee90;
+    color: #ea0b0b;
+}
+
+.horizontal-line {
+    border-bottom: 3px solid #ccc;
+}
+
+.vertical-line {
+    border-right: 3px solid #ccc;
+}
+
+#replay {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#replay:hover {
+    background-color: #218838;
+}
+
+
+.hidden{
+    display: none;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls {
+    background-color: #60B5FF;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.controls select {
+    margin-left: 10px;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease;
+}
+
+.controls select:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+.controls button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+>>>>>>> 922f6441616bda15f982b2001c1636951c61fa82

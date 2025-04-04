@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,3 +47,53 @@
     <script src="tictactoe.js"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tictactoe.css" />
+  </head>
+  <body>
+    <div class="background-blur"></div>
+    <div id="wrapper">
+      <div class="controls">
+        <label
+          >Game Mode:
+          <select id="modeSelect">
+            <option value="human">2 Players</option>
+            <option value="ai">Vs AI</option>
+          </select>
+        </label>
+
+        <label id="difficultyLabel" class="hidden">
+          AI Difficulty:
+          <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </label>
+
+        <button onclick="startGame()">Start Game</button>
+      </div>
+
+      <div id="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="scoreboard">Score - O: 0 | X: 0</div>
+        <hr />
+        <div id="board"></div>
+        <button id="replay" class="hidden" onclick="replayGame()">
+          Play Again
+        </button>
+      </div>
+    </div>
+    
+
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
+>>>>>>> 922f6441616bda15f982b2001c1636951c61fa82

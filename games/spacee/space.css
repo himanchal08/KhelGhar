@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family:'Courier New', Courier, monospace;
     text-align: center;
@@ -5,4 +6,13 @@ body {
 
 #board {
     background-color: black;
+=======
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#board {
+    background-color: black;
+>>>>>>> 922f6441616bda15f982b2001c1636951c61fa82
 }
