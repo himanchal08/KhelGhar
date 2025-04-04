@@ -1,0 +1,308 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --bg-color: #f8f9fa;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #e9ecef;
+  --header-footer-bg: #3a0ca3;
+  --header-footer-text: #ffffff;
+}
+
+.dark-mode {
+  --primary-color: #4cc9f0;
+  --secondary-color: #4895ef;
+  --bg-color: #121212;
+  --text-color: #e9ecef;
+  --card-bg: #1e1e1e;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --hover-color: #2d2d2d;
+  --header-footer-bg: #080c24;
+  --header-footer-text: #e9ecef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  color: var(--header-footer-text);
+  text-decoration: none;
+  gap: 8px;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.github-link:hover {
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.github-logo {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 20px 0;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--hover-color);
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-toggle {
+  height: 40px;
+  background-color: var(--card-bg);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.theme-toggle:hover {
+  background-color: var(--hover-color);
+}
+
+.theme-icon {
+  font-size: 16px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.game-tile {
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px var(--shadow-color);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.game-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.755);
+}
+
+.game-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 48px;
+}
+
+.game-info {
+  padding: 15px;
+}
+
+.game-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.game-description {
+  font-size: 14px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.game-tile:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-footer {
+  background-color: var(--header-footer-bg);
+  color: var(--header-footer-text);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--header-footer-text);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.copyright {
+  opacity: 0.8;
+  font-size: 14px;
+}
+#search-bar {
+  margin: 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+#search-input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#search-button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+#search-button:hover {
+  background-color: var(--secondary-color);
+}   
+
+
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .main-header,
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .github-link {
+    margin-top: 10px;
+  }
+
+  .footer-links {
+    margin-bottom: 15px;
+  }
+  .theme-toggle {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+  }
+}
