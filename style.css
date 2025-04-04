@@ -135,7 +135,7 @@ h1 {
 
 .games-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
   gap: 25px;
 }
 
@@ -151,7 +151,7 @@ h1 {
 
 .game-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.755);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.85);
 }
 
 .game-image {
